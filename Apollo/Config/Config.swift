@@ -9,5 +9,6 @@ import Foundation
 
 struct Config {
     public static var serverURL = "https://ams-be-yasu.herokuapp.com"
+    public static var bgCode = "#097d14"
 }
 

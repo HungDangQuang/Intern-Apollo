@@ -11,8 +11,8 @@ import OpenGLES
 class AccountViewModel: NSObject{
     
     private var loginService: LoginService!
-    private var email: String!
-    private var password: String!
+//    private var email: String!
+//    private var password: String!
     
     
 //    private(set) var resData: ReceivedData!{
@@ -30,17 +30,14 @@ class AccountViewModel: NSObject{
 //    }
     
     
-    init(email:String, password: String){
+    override init(){
         super.init()
         
-        self.email = email
-        self.password = password
         self.loginService = LoginService()
-        
-        callToLogin()
+ 
     }
     
-    func callToLogin(){
+    func callToLogin(email:String, password: String){
         self.loginService.login(email: email, password: password) { res in
             print(res)
         }

@@ -21,8 +21,10 @@ class ViewController: UIViewController {
     }
     
     func calltoViewModelForLogin(){
-        self.accountViewModel = AccountViewModel(email: self.email.text!, password: self.password.text!)
+         self.accountViewModel = AccountViewModel()
+         accountViewModel.callToLogin(email: self.email.text!, password: password.text!)
     }
 
 }
+
 
