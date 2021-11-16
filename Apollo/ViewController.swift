@@ -17,13 +17,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        calltoViewModelForLogin()
+//        calltoViewModelForLogin()
     }
     
-    func calltoViewModelForLogin(){
-         self.accountViewModel = AccountViewModel()
-         accountViewModel.callToLogin(email: self.email.text!, password: password.text!)
-    }
+//    func calltoViewModelForLogin(){
+//         self.accountViewModel = AccountViewModel()
+//         accountViewModel.callToLogin(email: self.email.text!, password: password.text!)
+//    }
 
 }
 

@@ -10,7 +10,7 @@ import Foundation
 class LoginService: NSObject {
     
     
-    func login(email: String, password: String, completion: @escaping (ReceivedData)->()){
+    func login(email: String, password: String, completionHandler: @escaping(Int)->()){
         
         let url = URL(string: Config.serverURL + "/auth/login")
         
@@ -29,6 +29,7 @@ class LoginService: NSObject {
         
         request.httpBody = jsonData
         
+        var statusCode = 0
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             if let error = error {
@@ -36,13 +37,15 @@ class LoginService: NSObject {
                 return
             }
             
-            // Check if the call is succeessful
-            guard let httpResponse = response as? HTTPURLResponse,
-                        (200...299).contains(httpResponse.statusCode) else {
-                
+            let httpResponse = response as! HTTPURLResponse
+            print(httpResponse.statusCode)
+            statusCode = httpResponse.statusCode
+            
+            // Check if the call is successful
+            guard 200 ... 299 ~= httpResponse.statusCode else {
                 print("Error with the response, unexpected status code: \(String(describing: response))")
                 return
-              }
+            }
             
             guard let data = data else {return}
             
@@ -55,8 +58,8 @@ class LoginService: NSObject {
                 let defaults = UserDefaults.standard
                 defaults.set(result.token.accessToken, forKey: "accessToken")
                 defaults.set(result.user.id, forKey: "userID")
+                completionHandler(statusCode)
                 
-                completion(result)
                         
             }catch let jsonErr{
                 print(jsonErr)

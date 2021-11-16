@@ -37,9 +37,13 @@ class AccountViewModel: NSObject{
  
     }
     
-    func callToLogin(email:String, password: String){
+    func callToLogin(email:String, password: String, completionHandler:@escaping(String)->()){
+        var message = "none"
         self.loginService.login(email: email, password: password) { res in
-            print(res)
-        }
+            if 200...299 ~= res {
+                message = "success"
+            }
+        completionHandler(message)
     }
+}
 }

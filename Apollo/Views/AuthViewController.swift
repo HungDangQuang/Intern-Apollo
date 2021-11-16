@@ -15,6 +15,8 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var btnLogin: UIButton!
     
+    var accountViewModel: AccountViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,9 +33,36 @@ class AuthViewController: UIViewController {
     }
         
     @IBAction func pushtoNextVC(_ sender: Any) {
-        let sb = UIStoryboard(name: "Home", bundle: nil)
-        let homeVC = sb.instantiateViewController(withIdentifier: "home")
-        navigationController?.pushViewController(homeVC, animated: true)
+        
+        // Validate
+        guard txtEmail.text != ""  && txtPassword.text != "" else {
+            
+            let notification = UIAlertController(title: "Nofication", message: "Email or Password must not be empty", preferredStyle: .alert)
+            notification.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(notification, animated: true, completion: nil)
+            return
+        }
+        
+        self.accountViewModel = AccountViewModel()
+        
+        accountViewModel.callToLogin(email: txtEmail.text!, password: txtPassword.text!) { message in
+            print(message)
+            if message == "success" {
+                DispatchQueue.main.async {
+                    let sb = UIStoryboard(name: "Home", bundle: nil)
+                    let homeVC = sb.instantiateViewController(withIdentifier: "home")
+                    self.navigationController?.pushViewController(homeVC, animated: true)
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    let notification = UIAlertController(title: "Nofication", message: "Login failed, please try again", preferredStyle: .alert)
+                    notification.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(notification, animated: true, completion: nil)
+                }
+            }
+        }
+
     }
 }
 
