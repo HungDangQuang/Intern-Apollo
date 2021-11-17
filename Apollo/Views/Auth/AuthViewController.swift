@@ -49,9 +49,12 @@ class AuthViewController: UIViewController {
             print(message)
             if message == "success" {
                 DispatchQueue.main.async {
-                    let sb = UIStoryboard(name: "Home", bundle: nil)
-                    let homeVC = sb.instantiateViewController(withIdentifier: "home")
-                    self.navigationController?.pushViewController(homeVC, animated: true)
+                                    
+//                    let sb = UIStoryboard(name: "Home", bundle: nil)
+//                    let mainTab = sb.instantiateViewController(withIdentifier: "MainTab")
+                    
+                    let mainTab = BaseTabbarController()
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTab)
                 }
             }
             else {

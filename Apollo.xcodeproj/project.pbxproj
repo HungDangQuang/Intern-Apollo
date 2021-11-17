@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110E1DC82744B43900516688 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110E1DC72744B43900516688 /* TabItem.swift */; };
 		114F2C8A274249D20050603A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114F2C89274249D20050603A /* AuthViewController.swift */; };
 		114F2C8C27424A260050603A /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114F2C8B27424A260050603A /* Auth.storyboard */; };
 		114F2C8F274251070050603A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114F2C8E274251070050603A /* Home.storyboard */; };
@@ -24,9 +25,24 @@
 		1155FCBE2742135B001707BC /* ReceivedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155FCBD2742135B001707BC /* ReceivedData.swift */; };
 		1155FCC027421445001707BC /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155FCBF27421445001707BC /* LoginService.swift */; };
 		1155FCC32742149F001707BC /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155FCC22742149F001707BC /* Config.swift */; };
+		11C046B527448F6C005616E9 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C046B427448F6C005616E9 /* HomeTableViewCell.swift */; };
+		11C046B72744910E005616E9 /* QRScanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C046B62744910E005616E9 /* QRScanner.storyboard */; };
+		11C046BA2744913C005616E9 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C046B92744913C005616E9 /* QRScannerViewController.swift */; };
+		11C046BD2744915A005616E9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C046BC2744915A005616E9 /* InfoViewController.swift */; };
+		11C046BF27449410005616E9 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C046BE27449410005616E9 /* Info.storyboard */; };
+		11DC42C72744B57C00C36F0E /* BaseTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC42C62744B57C00C36F0E /* BaseTabbarController.swift */; };
+		11DC42CA2744B75400C36F0E /* TabNavigationMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC42C92744B75400C36F0E /* TabNavigationMenu.swift */; };
+		11DC42CD2744D31800C36F0E /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC42CC2744D31800C36F0E /* Teacher.swift */; };
+		11DC42CF2744D34700C36F0E /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC42CE2744D34700C36F0E /* Course.swift */; };
+		11DC42D12744D36800C36F0E /* InfoCheckin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC42D02744D36800C36F0E /* InfoCheckin.swift */; };
+		11DC42D32744D3F500C36F0E /* GetCourseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC42D22744D3F500C36F0E /* GetCourseService.swift */; };
+		11DC42D62744D7AA00C36F0E /* CourseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC42D52744D7AA00C36F0E /* CourseViewModel.swift */; };
+		11DC42D82744DD7300C36F0E /* CourseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC42D72744DD7300C36F0E /* CourseDataSource.swift */; };
+		11DC42DB2744E1A200C36F0E /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DC42DA2744E1A200C36F0E /* Box.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110E1DC72744B43900516688 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		114F2C89274249D20050603A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		114F2C8B27424A260050603A /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		114F2C8E274251070050603A /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -46,6 +62,20 @@
 		1155FCBD2742135B001707BC /* ReceivedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedData.swift; sourceTree = "<group>"; };
 		1155FCBF27421445001707BC /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		1155FCC22742149F001707BC /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		11C046B427448F6C005616E9 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		11C046B62744910E005616E9 /* QRScanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScanner.storyboard; sourceTree = "<group>"; };
+		11C046B92744913C005616E9 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		11C046BC2744915A005616E9 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		11C046BE27449410005616E9 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		11DC42C62744B57C00C36F0E /* BaseTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabbarController.swift; sourceTree = "<group>"; };
+		11DC42C92744B75400C36F0E /* TabNavigationMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationMenu.swift; sourceTree = "<group>"; };
+		11DC42CC2744D31800C36F0E /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		11DC42CE2744D34700C36F0E /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		11DC42D02744D36800C36F0E /* InfoCheckin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCheckin.swift; sourceTree = "<group>"; };
+		11DC42D22744D3F500C36F0E /* GetCourseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCourseService.swift; sourceTree = "<group>"; };
+		11DC42D52744D7AA00C36F0E /* CourseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseViewModel.swift; sourceTree = "<group>"; };
+		11DC42D72744DD7300C36F0E /* CourseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDataSource.swift; sourceTree = "<group>"; };
+		11DC42DA2744E1A200C36F0E /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110E1DC62744B3E800516688 /* Navigation Menu */ = {
+			isa = PBXGroup;
+			children = (
+				110E1DC72744B43900516688 /* TabItem.swift */,
+				11DC42C62744B57C00C36F0E /* BaseTabbarController.swift */,
+				11DC42C92744B75400C36F0E /* TabNavigationMenu.swift */,
+			);
+			path = "Navigation Menu";
+			sourceTree = "<group>";
+		};
 		114F2C882742496F0050603A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				114F2C89274249D20050603A /* AuthViewController.swift */,
-				114F2C90274251970050603A /* HomeViewController.swift */,
+				11DC42CB2744BADC00C36F0E /* Auth */,
+				110E1DC62744B3E800516688 /* Navigation Menu */,
+				11C046BB27449147005616E9 /* Info */,
+				11C046B82744911E005616E9 /* QRScanner */,
+				11C046B327448F37005616E9 /* home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -73,6 +116,8 @@
 			children = (
 				114F2C8B27424A260050603A /* Auth.storyboard */,
 				114F2C8E274251070050603A /* Home.storyboard */,
+				11C046B62744910E005616E9 /* QRScanner.storyboard */,
+				11C046BE27449410005616E9 /* Info.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -96,6 +141,7 @@
 		1155FC9B274209D1001707BC /* Apollo */ = {
 			isa = PBXGroup;
 			children = (
+				11DC42D92744E18B00C36F0E /* Utilities */,
 				1155FCC127421494001707BC /* Config */,
 				1155FCB027420FC5001707BC /* Models */,
 				1155FCB327421055001707BC /* ViewModels */,
@@ -120,6 +166,9 @@
 				1155FCB9274212E9001707BC /* User.swift */,
 				1155FCBB2742131A001707BC /* Token.swift */,
 				1155FCBD2742135B001707BC /* ReceivedData.swift */,
+				11DC42CC2744D31800C36F0E /* Teacher.swift */,
+				11DC42CE2744D34700C36F0E /* Course.swift */,
+				11DC42D02744D36800C36F0E /* InfoCheckin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				1155FCB427421073001707BC /* AccountViewModel.swift */,
+				11DC42D52744D7AA00C36F0E /* CourseViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -136,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				1155FCBF27421445001707BC /* LoginService.swift */,
+				11DC42D22744D3F500C36F0E /* GetCourseService.swift */,
 			);
 			path = NetworkServices;
 			sourceTree = "<group>";
@@ -146,6 +197,48 @@
 				1155FCC22742149F001707BC /* Config.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		11C046B327448F37005616E9 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				114F2C90274251970050603A /* HomeViewController.swift */,
+				11C046B427448F6C005616E9 /* HomeTableViewCell.swift */,
+				11DC42D72744DD7300C36F0E /* CourseDataSource.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		11C046B82744911E005616E9 /* QRScanner */ = {
+			isa = PBXGroup;
+			children = (
+				11C046B92744913C005616E9 /* QRScannerViewController.swift */,
+			);
+			path = QRScanner;
+			sourceTree = "<group>";
+		};
+		11C046BB27449147005616E9 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				11C046BC2744915A005616E9 /* InfoViewController.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		11DC42CB2744BADC00C36F0E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				114F2C89274249D20050603A /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		11DC42D92744E18B00C36F0E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				11DC42DA2744E1A200C36F0E /* Box.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,9 +300,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1155FCA9274209D4001707BC /* LaunchScreen.storyboard in Resources */,
+				11C046BF27449410005616E9 /* Info.storyboard in Resources */,
 				114F2C8F274251070050603A /* Home.storyboard in Resources */,
 				1155FCA6274209D4001707BC /* Assets.xcassets in Resources */,
 				1155FCA4274209D1001707BC /* Main.storyboard in Resources */,
+				11C046B72744910E005616E9 /* QRScanner.storyboard in Resources */,
 				114F2C8C27424A260050603A /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,17 +316,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DC42D62744D7AA00C36F0E /* CourseViewModel.swift in Sources */,
 				114F2C8A274249D20050603A /* AuthViewController.swift in Sources */,
 				1155FCA1274209D1001707BC /* ViewController.swift in Sources */,
+				11DC42D12744D36800C36F0E /* InfoCheckin.swift in Sources */,
+				11DC42CA2744B75400C36F0E /* TabNavigationMenu.swift in Sources */,
+				11C046B527448F6C005616E9 /* HomeTableViewCell.swift in Sources */,
 				1155FCB527421073001707BC /* AccountViewModel.swift in Sources */,
+				11C046BD2744915A005616E9 /* InfoViewController.swift in Sources */,
+				11DC42CD2744D31800C36F0E /* Teacher.swift in Sources */,
 				1155FCB227420FD6001707BC /* Account.swift in Sources */,
 				1155FC9D274209D1001707BC /* AppDelegate.swift in Sources */,
+				11C046BA2744913C005616E9 /* QRScannerViewController.swift in Sources */,
 				1155FCC027421445001707BC /* LoginService.swift in Sources */,
+				11DC42D82744DD7300C36F0E /* CourseDataSource.swift in Sources */,
+				11DC42DB2744E1A200C36F0E /* Box.swift in Sources */,
 				1155FCBE2742135B001707BC /* ReceivedData.swift in Sources */,
+				11DC42CF2744D34700C36F0E /* Course.swift in Sources */,
 				1155FC9F274209D1001707BC /* SceneDelegate.swift in Sources */,
 				1155FCC32742149F001707BC /* Config.swift in Sources */,
 				1155FCBA274212E9001707BC /* User.swift in Sources */,
+				11DC42D32744D3F500C36F0E /* GetCourseService.swift in Sources */,
 				1155FCBC2742131A001707BC /* Token.swift in Sources */,
+				110E1DC82744B43900516688 /* TabItem.swift in Sources */,
+				11DC42C72744B57C00C36F0E /* BaseTabbarController.swift in Sources */,
 				114F2C91274251970050603A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
