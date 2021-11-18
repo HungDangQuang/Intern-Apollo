@@ -11,25 +11,7 @@ import OpenGLES
 class AccountViewModel: NSObject{
     
     private var loginService: LoginService!
-//    private var email: String!
-//    private var password: String!
-    
-    
-//    private(set) var resData: ReceivedData!{
-//        didSet {
-//            self.bindAccountViewModelToController()
-//        }
-//    }
-//    var bindAccountViewModelToController : (() -> ()) = {}
-    
-//    override init(){
-//        super.init()
-//
-//        self.loginService = LoginService()
-//        callToLogin()
-//    }
-    
-    
+
     override init(){
         super.init()
         

@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Studying Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L95-2O-KvD">
-                                <rect key="frame" x="139.5" y="128" width="135" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="82" y="84" width="250" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wzq-YL-Cwi">
-                                <rect key="frame" x="0.0" y="179" width="414" height="619"/>
+                                <rect key="frame" x="0.0" y="150" width="414" height="654.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="168" id="LV7-QR-qu1" customClass="HomeTableViewCell" customModule="Apollo" customModuleProvider="target">
@@ -34,8 +34,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aP-lq-AYE">
-                                                    <rect key="frame" x="40" y="31" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="40" y="31" width="44.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -71,7 +71,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lblCourse" destination="3aP-lq-AYE" id="E2n-9b-CoC"/>
-                                            <outlet property="lblRoom" destination="zf6-pf-dXn" id="lFA-J3-sqI"/>
+                                            <outlet property="lblRoom" destination="czf-Ac-x5M" id="ihz-tV-o43"/>
                                             <outlet property="lblStatus" destination="zf6-pf-dXn" id="jWo-Sp-EEr"/>
                                             <outlet property="lblTeacher" destination="aMz-fK-7qL" id="uHD-a5-HJz"/>
                                         </connections>
@@ -80,7 +80,6 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="Wzq-YL-Cwi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0N5-yF-a6T"/>
                             <constraint firstItem="L95-2O-KvD" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ARf-Vr-3zc"/>
@@ -102,11 +101,10 @@
         <!--Item-->
         <scene sceneID="Jbm-oQ-HoK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jeh-pn-jdr" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="jeh-pn-jdr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Ggm-0N-ZhF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z0V-79-fau">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -137,9 +135,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

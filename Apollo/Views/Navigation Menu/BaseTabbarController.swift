@@ -11,22 +11,33 @@ class BaseTabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-//        let homeVC = HomeViewController()
-//        let InfoVC = InfoViewController()
-//
-//        // Set title
-//        homeVC.title = "home"
-//        InfoVC.title = "info"
-//        self.setViewControllers([homeVC,InfoVC], animated: true)
+    
         setUpTabbar()
+        tabBar.backgroundColor = .white
         
+        guard let items = self.tabBar.items else {
+            return
+        }
+        
+        let images = ["house", "person"]
+        
+        for x in 0...1 {
+            items[x].image = UIImage(systemName: images[x])
+        }
     }
+    
     func setUpTabbar(){
-        let homeVC = UINavigationController(rootViewController: HomeViewController())
-        let infoVC = UINavigationController(rootViewController: InfoViewController())
-        viewControllers = [homeVC,infoVC]
+        let sb = UIStoryboard.init(name: "Home", bundle: nil)
+        let homeVC = sb.instantiateViewController(withIdentifier: "home") as! HomeViewController
+        homeVC.title = "Home"
+        
+        let sbInfo = UIStoryboard.init(name: "Info", bundle: nil)
+        let infoVC = sbInfo.instantiateViewController(withIdentifier: "Info") as! InfoViewController
+        infoVC.title = "Info"
+        
+        let TabhomeVC = UINavigationController(rootViewController: homeVC)
+        let TabinfoVC = UINavigationController(rootViewController: infoVC)
+        viewControllers = [TabhomeVC,TabinfoVC]
     }
     
 }

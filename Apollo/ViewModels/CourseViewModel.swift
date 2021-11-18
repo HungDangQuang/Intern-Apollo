@@ -10,16 +10,18 @@ import Foundation
 
 class CourseViewModel : NSObject {
     
-    private var getCourseService: GetCourseService!
+    private var getCourseService = GetCourseService()
     var resData: CourseList!
     var repData: Box<CourseList> = Box(CourseList(data: []))
     override init(){
-        self.getCourseService = GetCourseService()
+        super.init()
+        self.getCourseData()
     }
     
     func getCourseData(){
         self.getCourseService.getCourse {  res in
             self.repData.value = res
+            
         }
     }
 }

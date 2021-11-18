@@ -18,14 +18,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tbvCourses.delegate = self
-//        tbvCourses.dataSource = self
+        tbvCourses.delegate = self
+        tbvCourses.dataSource = self
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = .blue
-//        viewModel.repData.bind { res in
-//            self.arrCourses = res.data
-//            self.tbvCourses.reloadData()
-//        }
+        view.backgroundColor =  self.hexStringToUIColor(hex: Config.bgCode)
+        tbvCourses.backgroundColor = self.hexStringToUIColor(hex: Config.bgCode)
+        
+        viewModel.repData.bind { res in
+            self.arrCourses = res.data
+//            print(res)
+            DispatchQueue.main.async {
+                self.tbvCourses.reloadData()
+            }
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,7 +46,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.lblCourse.text = self.arrCourses[indexPath.section].courseCode
         cell.lblRoom.text = self.arrCourses[indexPath.section].room
-        cell.backgroundColor = self.hexStringToUIColor(hex: "#097d14")
+        cell.backgroundColor = self.hexStringToUIColor(hex: Config.bgCode)
         
         cell.layer.cornerRadius = 10
         cell.layer.borderWidth = 2
@@ -66,20 +71,19 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 5
     }
-    
+
     // Change color
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
-        headerView.backgroundColor = self.hexStringToUIColor(hex: "#097d14")
+        headerView.backgroundColor = self.hexStringToUIColor(hex: Config.bgCode)
         return headerView
     }
-    
+//
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        let sb = UIStoryboard(name: "Main", bundle: nil)
-//        let QrVC:QRViewController = sb.instantiateViewController(identifier: "qr") as QRViewController
-//        QrVC.classId = arrCourses[indexPath.section].id!
-//        navigationController?.pushViewController(QrVC, animated: true)
+        let sb = UIStoryboard(name: "QRScanner", bundle: nil)
+        let QrVC = sb.instantiateViewController(identifier: "QR") as QRScannerViewController
+        navigationController?.pushViewController(QrVC, animated: true)
         
     }
   
