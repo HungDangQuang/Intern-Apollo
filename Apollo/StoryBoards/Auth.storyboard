@@ -54,13 +54,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Q5O-ZE-b8x">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="usN-kV-9nX" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="0jr-ae-ZCV"/>
+                            <constraint firstItem="Q5O-ZE-b8x" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="1eH-93-u99"/>
                             <constraint firstItem="x1Y-8U-By0" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" multiplier="0.4" id="1rW-uT-eFM"/>
                             <constraint firstItem="MmL-FR-2Mi" firstAttribute="width" secondItem="vDu-zF-Fre" secondAttribute="width" multiplier="0.5" id="69U-5v-vJd"/>
+                            <constraint firstItem="Q5O-ZE-b8x" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="6SS-HT-gQp"/>
                             <constraint firstItem="MmL-FR-2Mi" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="Ags-AR-mri"/>
                             <constraint firstItem="Gzz-8Y-qWU" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="CWW-71-reM"/>
                             <constraint firstItem="MmL-FR-2Mi" firstAttribute="top" secondItem="Gzz-8Y-qWU" secondAttribute="bottom" constant="30" id="Hj9-et-LTb"/>
@@ -77,6 +82,7 @@
                     <navigationItem key="navigationItem" id="Wac-oN-o2N"/>
                     <connections>
                         <outlet property="btnLogin" destination="usN-kV-9nX" id="cYO-Fz-XbG"/>
+                        <outlet property="spinner" destination="Q5O-ZE-b8x" id="Bo3-XO-20f"/>
                         <outlet property="txtEmail" destination="x1Y-8U-By0" id="lMW-Jp-ydF"/>
                         <outlet property="txtPassword" destination="fcB-ng-yTr" id="9ct-u9-ia6"/>
                     </connections>
@@ -89,7 +95,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yhx-09-Aq0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hfo-Hm-DHi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="hfo-Hm-DHi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3lw-O9-76H">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

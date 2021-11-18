@@ -25,7 +25,7 @@ class AccountViewModel: NSObject{
             if 200...299 ~= res {
                 message = "success"
             }
-        completionHandler(message)
+            completionHandler(message)
+        }
     }
-}
 }

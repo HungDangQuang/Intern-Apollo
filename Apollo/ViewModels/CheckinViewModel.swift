@@ -8,10 +8,21 @@
 import Foundation
 
 class CheckinViewModel: NSObject {
+    
     var message = Box("")
+    
     private var checkinService = CheckinService()
     
-    func getMessage(){
-        self.checkinService.checkin(courseCode: <#T##String#>, QRCode: <#T##String#>, completion: <#T##(Int) -> ()#>)
+    func scanQRCode(courseCode: String, QRCode: String){
+        self.checkinService.checkin(courseCode: courseCode, QRCode: QRCode) { res in
+            
+            // Check Status Code
+            if 200...299 ~= res {
+                self.message.value = "success"
+            }
+            else {
+                self.message.value = "failure"
+            }
+        }
     }
 }

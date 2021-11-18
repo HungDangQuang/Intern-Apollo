@@ -15,11 +15,14 @@ class InfoViewController: UIViewController {
     
     @IBOutlet weak var lblEmail: UILabel!
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     private var viewModel = InfoViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        spinner.hidesWhenStopped = true
+        spinner.startAnimating()
         self.view.backgroundColor = hexStringToUIColor(hex: Config.bgCode)
         
         viewModel.studentName.bind { name in
@@ -39,9 +42,21 @@ class InfoViewController: UIViewController {
                 self.lblEmail.text = email
             }
         }
-        
+        spinner.stopAnimating()
     }
+     
+    
+    @IBAction func logout(_ sender: Any) {
+        // remove token
+        UserDefaults.standard.removeObject(forKey: "accessToken")
+        UserDefaults.standard.removeObject(forKey: "userID")
         
+        // change root view controller
+        let storyboard = UIStoryboard(name: "Auth", bundle: nil)
+        let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavController)
+    }
     
     
 }

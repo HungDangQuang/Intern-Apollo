@@ -17,9 +17,14 @@ class AuthViewController: UIViewController {
     
     var accountViewModel: AccountViewModel!
     
+    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        spinner.hidesWhenStopped = true
         // hide storyboard
         self.hideKeyboardWhenTappedAround()
         
@@ -34,9 +39,17 @@ class AuthViewController: UIViewController {
         
     @IBAction func pushtoNextVC(_ sender: Any) {
         
-        // Validate
+        // Start Animating and Prevent User click Login unitl function is done
+        spinner.startAnimating()
+        self.view.isUserInteractionEnabled = false
+        
+        // Validate email and password is empty or not
         guard txtEmail.text != ""  && txtPassword.text != "" else {
             
+            self.spinner.stopAnimating()
+            self.view.isUserInteractionEnabled = true
+            
+            // Push Notification
             let notification = UIAlertController(title: "Nofication", message: "Email or Password must not be empty", preferredStyle: .alert)
             notification.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(notification, animated: true, completion: nil)
@@ -49,19 +62,24 @@ class AuthViewController: UIViewController {
             print(message)
             if message == "success" {
                 DispatchQueue.main.async {
-                                    
-//                    let sb = UIStoryboard(name: "Home", bundle: nil)
-//                    let mainTab = sb.instantiateViewController(withIdentifier: "MainTab")
                     
+                    // Push Tabbar and change Root
                     let mainTab = BaseTabbarController()
                     (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTab)
                 }
             }
             else {
                 DispatchQueue.main.async {
-                    let notification = UIAlertController(title: "Nofication", message: "Login failed, please try again", preferredStyle: .alert)
+                    
+                    self.spinner.stopAnimating()
+                    self.view.isUserInteractionEnabled = true
+                    
+                    // Notification failed to login
+                    let notification = UIAlertController(title: "Nofication", message: "Login Failed, Please Try Again", preferredStyle: .alert)
                     notification.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(notification, animated: true, completion: nil)
+                    return
+
                 }
             }
         }

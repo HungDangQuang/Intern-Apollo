@@ -78,6 +78,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tG3-mS-8tD">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <constraints>
@@ -85,12 +88,15 @@
                             <constraint firstItem="L95-2O-KvD" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="ARf-Vr-3zc"/>
                             <constraint firstItem="Wzq-YL-Cwi" firstAttribute="height" secondItem="vDu-zF-Fre" secondAttribute="height" multiplier="0.8" id="Hev-r8-zBH"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wzq-YL-Cwi" secondAttribute="trailing" id="MWo-pX-DoJ"/>
+                            <constraint firstItem="tG3-mS-8tD" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="VCd-7v-5D1"/>
                             <constraint firstItem="Wzq-YL-Cwi" firstAttribute="top" secondItem="L95-2O-KvD" secondAttribute="bottom" constant="30" id="eHr-4A-5If"/>
                             <constraint firstItem="L95-2O-KvD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="gcg-WX-jnt"/>
+                            <constraint firstItem="tG3-mS-8tD" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="yuK-TU-PM3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fbh-Mu-eb6"/>
                     <connections>
+                        <outlet property="spinner" destination="tG3-mS-8tD" id="nSG-Ac-9Gz"/>
                         <outlet property="tbvCourses" destination="Wzq-YL-Cwi" id="mzn-2y-cYO"/>
                     </connections>
                 </viewController>

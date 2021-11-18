@@ -10,9 +10,11 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tbvCourses: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    private var courseViewModel : CourseViewModel!
     private let viewModel = CourseViewModel()
+    
+    // Array gets data from api
     var arrCourses:[Course] = []
     
     override func viewDidLoad() {
@@ -20,14 +22,25 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tbvCourses.delegate = self
         tbvCourses.dataSource = self
-        // Do any additional setup after loading the view.
+        
+        // Set Up Bg Color
+        
         view.backgroundColor =  self.hexStringToUIColor(hex: Config.bgCode)
         tbvCourses.backgroundColor = self.hexStringToUIColor(hex: Config.bgCode)
         
+        // Set up for spinner
+        spinner.hidesWhenStopped = true
+        spinner.startAnimating()
+        
+        // Get Data
         viewModel.repData.bind { res in
             self.arrCourses = res.data
-//            print(res)
+            
             DispatchQueue.main.async {
+                
+                self.spinner.stopAnimating()
+                
+                // Reload Table View
                 self.tbvCourses.reloadData()
             }
         }
@@ -78,7 +91,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         headerView.backgroundColor = self.hexStringToUIColor(hex: Config.bgCode)
         return headerView
     }
-//
+
+    // Push to QR VC
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let sb = UIStoryboard(name: "QRScanner", bundle: nil)
@@ -86,6 +100,4 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         navigationController?.pushViewController(QrVC, animated: true)
         
     }
-  
-
 }
